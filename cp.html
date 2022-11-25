@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Town | Change Password</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reg.css" />
+
+    <style>
+      .error {
+        font-size: 13px;
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-1">
+        <a href="index.html" class="logo"> <i class="fas fa-book"></i> paper town </a>
+
+        <form action="" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="search here..."
+            id="search-box"
+          />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+          <div id="search-btn" class="fas fa-search"></div>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <div id="login-btn" class="fas fa-user"></div>
+        </div>
+      </div>
+
+      <div class="header-2">
+        <nav class="navbar">
+          <a href="index.html">return home</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="active regForm reg-form-container">
+      <form id="register" method="POST">
+
+
+        <span>new password</span>
+        <input
+          type="password"
+          name="password"
+          class="box"
+          placeholder="enter your password"
+          id="password"
+        />
+        <div class="error">
+          <small id="errorPass"></small>
+        </div>
+
+        <span>confirm new password</span>
+        <input
+          type="password"
+          name="confirmPassword"
+          class="box"
+          placeholder="enter your password"
+          id="confirmPassword"
+        />
+        <div class="error">
+          <small id="errorConPass"></small>
+        </div>
+        <input type="submit" value="sign up" onclick="addUser()" class="btn" />
+      </form>
+    </div>
+
+    <script src="js/reg.js"></script>
+  </body>
+</html>

@@ -9,13 +9,6 @@ function addUser() {
         password: document.getElementById("password").value,
       };
 
-      fetch("/user/register/", {
-        method: "POST",
-        body: JSON.stringify(_data),
-        headers: { "Content-type": "application/json; charset = UTF-8" },
-      }).then(alert("Sign up successful"));
-
-      window.location.href = "index.html";
     }
   });
 }
