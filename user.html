@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/721783097f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Paper Town | Users</title>
+  </head>
+  <body>
+    <div class="sidebar active">
+      <div class="logo_content">
+        <div class="logo">
+          <div class="logo_name">Paper Town</div>
+        </div>
+        <i class="fa-solid fa-bars" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="dashboard.html" target="_self">
+            <i class="bi bi-columns-gap"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="bi bi-people"></i>
+            <span class="links_name">Users</span>
+          </a>
+          <span class="tooltip">Users</span>
+        </li>
+        <li>
+          
+        </li>
+      </ul>
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <!-- <img src="" alt="" /> -->
+            <div class="name_job">
+              <div class="name" id="adminName"></div>
+              <div class="job"></div>
+            </div>
+          </div>
+          <a href="index.html"><i class="fa-solid fa-right-from-bracket" id="logout"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_content users">
+      <div class="text fw-bold">Users</div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card h-100">
+            <div class="icon">
+              <i
+                class="user-icon fa-solid fa-user bg-info rounded-circle mt-3 ms-3 fs-4"
+              ></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Total Users</h5>
+              <p class="card-text fw-bold fs-3">2500</p>
+              <p class="card-text card-foot text-muted">All time</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card h-100">
+            <div class="icon">
+              <i
+                class="fa-solid fa-chart-column bg-info rounded-circle px-2 py-2 mt-3 ms-3 fs-3"
+              ></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">New Users</h5>
+              <p class="card-text fw-bold fs-3">24</p>
+              <p class="card-text card-foot text-muted">last 24 hour</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card h-100">
+            <div class="icon traffic-icon-box">
+              <i
+                class="traffic-icon bi bi-stoplights-fill bg-info rounded-circle fs-4"
+              ></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Website Traffic</h5>
+              <p class="card-text fw-bold fs-3">1056</p>
+              <p class="card-text card-foot text-muted">last 24 hour</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="online-icon-box col-md-4">
+                <i class="online-icon fa-2xl fa-solid fa-circle"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body online-user">
+                  <h5 class="card-title">Online Users</h5>
+                  <p class="card-text fw-bold fs-3">12</p>
+                  <p class="card-text online-card-foot">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHART
+      <div class="graphBox mt-sm-4 d-none d-md-grid">
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <div class="card box">
+              <canvas id="monthly-user"></canvas>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <div class="card box">
+              <canvas id="upload"></canvas>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="row mt-3 g-4 d-none d-md-flex">
+        <div class="col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title fw-bold">Recent Registered Users</div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="myTable" class="table">
+                  <thead class="text-primary">
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                  
+                  </thead>
+                  <tr>
+                    <td>Miriam Gregory</td>
+                    <td>miriam2022@gmail.com</td>
+                    <td>************</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="rem rounded">Remove User</button> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="/js/chart.js"></script>
+    <script src="js/user.js"></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- LINKS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"
+    />
+    <script
+      src="https://kit.fontawesome.com/721783097f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Paper Town | Admin Dashboard</title>
+  </head>
+  <body>
+    <div class="sidebar active">
+      <div class="logo_content">
+        <div class="logo">
+          <div class="logo_name">Paper Town</div>
+        </div>
+        <i class="fa-solid fa-bars" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="dashboard.html" target="_self">
+            <i class="bi bi-columns-gap"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="bi bi-people"></i>
+            <span class="links_name">Users</span>
+          </a>
+          <span class="tooltip">Users</span>
+        </li>
+        <li>
+          
+        </li>
+      </ul>
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <!-- <img src="" alt="" /> -->
+            <div class="name_job">
+              <div class="name" id="adminName"></div>
+              <div class="job"></div>
+            </div>
+          </div>
+          <a href="index.html"><i class="fa-solid fa-right-from-bracket" id="logout"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="home_content">
+      <div class="text">Dashboard</div>
+      <div class="row row-cols-1 g-4">
+        <div class="col-lg-3 col-12">
+          <div class="card h-100">
+            <div class="icon">
+              <i
+                class="user-icon fa-solid fa-user bg-info rounded-circle mt-3 ms-3 fs-4"
+              ></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">New Users</h5>
+              <p class="card-text fw-bold fs-3">54</p>
+              <p class="card-text card-foot">last 24 hour</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12">
+          <div class="card h-100">
+            <div class="icon">
+              <i
+                class="fa-solid fa-chart-column bg-info rounded-circle px-2 py-2 mt-3 ms-3 fs-3"
+              ></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Income</h5>
+              <p class="card-text fw-bold fs-3">Nu.8685</p>
+              <p class="card-text card-foot">last 24 hour</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12">
+          <div class="card h-100">
+            <div class="icon">
+              <i
+                class="upload-icon fa-solid fa-file-arrow-up bg-info rounded-circle mt-3 ms-3 fs-4"
+              ></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Upload</h5>
+              <p class="card-text fw-bold fs-3">10314</p>
+              <p class="card-text card-foot">last 24 hour</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-12">
+          <div class="row row-cols-md-1">
+            <div class="col mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Recent Updates</h5>
+                  <p class="card-text">No new updates</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="row g-0">
+                  <div class="col-md-4 mes-icon d-none d-md-flex">
+                    <i class="bi bi-chat-square-text-fill"></i>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">New Messages</h5>
+                      <p class="card-text fw-bold fs-3">23</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div class="graphBox d-none d-sm-none d-md-grid mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 mb-4">
+            <div class="card pie-box h-100">
+              <div class="card-title fw-bold fs-3 ms-4 mt-1">
+                Revenue Source (Nu)
+              </div>
+              <canvas id="earn_week"></canvas>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="card box">
+              <div class="card-title fw-bold fs-3 ms-4 mt-1">
+                Revenue <span>(Annualy)</span>
+              </div>
+              <canvas id="earn_year"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/dashboardChart.js"></script>
+  </body>
+</html>

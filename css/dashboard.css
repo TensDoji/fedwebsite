@@ -13,6 +13,10 @@ body {
   overflow: visible;
 }
 
+i {
+  color:white;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
