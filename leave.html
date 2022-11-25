@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Town | Leave</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/leave.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <div class="header-1">
+        <a href="index.html" class="logo"> <i class="fas fa-book"></i> paper town </a>
+
+
+        <div class="icons">
+          <div id="search-btn" class="fas fa-search"></div>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <div id="login-btn" class="fas fa-user"></div>
+        </div>
+      </div>
+
+      <div class="header-2">
+        <nav class="navbar">
+          <a href="index.html">return home</a>
+
+          
+        </nav>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- bottom navbar  -->
+
+    <nav class="bottom-navbar">
+      <a href="#home" class="fas fa-home"></a>
+      <a href="#featured" class="fas fa-list"></a>
+      <a href="#arrivals" class="fas fa-tags"></a>
+      <a href="#reviews" class="fas fa-comments"></a>
+      <a href="#blogs" class="fas fa-blog"></a>
+    </nav>
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+        <div class="container1" id="container1" >
+            <h3 class="topic pt-5 mb-5 text-warning d-flex justify-content-center ">LEAVE APPLICATION FORM</h3>
+            <div class="warning pl-5">
+            <p>Please fill in the form below if you need to leave work.</p>
+        </div>
+            <div class=" m-5 ">
+            <form action="" method="get" autocomplete="off">
+                <div class=" row User-id ">
+                    <label>Username:</label>
+                    <input type="text"
+                    id="userId"
+                    name="userid"
+                    placeholder="enter your username" required>
+                </div>
+                <div class="row">
+                <div class="name mt-3 col-6">
+                    <label>First Name:</label>
+                    <input type="text"
+                    id="name"
+                    name="name"
+                    placeholder="enter your first name" required>
+                </div>
+                <div class=" name mt-3 col-6">
+                    <label>Last Name:</label>
+                    <input type="text"
+                    id="name"
+                    name="name"
+                    placeholder="enter your last name" required>
+                </div>
+            </div>
+            
+            <div class=" Number mt-3 ">
+                <label>Contact No:</label>
+                <input type="Number"
+                id="Number"
+                placeholder="enter your number" required>
+            </div>
+        
+             <div class="row">
+                <div class="Date mt-3 col-6">
+                    <label for="Date">Date Applied:</label>
+                         <input type="date" id="Date" placeholder="enter leave start date">
+                </div>
+                <div class="Date mt-3 col-6">
+                    <label for="Date">Last Date:</label>
+                         <input type="date" id="Date" placeholder="enter leave end date">
+                </div>
+            </div>
+                <div class=" row Type mt-3">
+                    <label for="type of leave">Type of Leave:</label>
+        
+                        <select name="Type of leave" id="type">
+                        <option value="Medical">Personal</option>
+                        <option value="Personal">Official</option>
+                        <option value="Business">Medical</option>
+                        </select>
+                    </div>
+                <div class="row Reason mt-3">
+                    <label  for="reason">Purpose:</label>
+                    <!-- <input class=" box" type="text"
+                    name="reason"> -->
+                    <textarea name="reason" class="box" cols="30" rows="5" requir></textarea>
+        
+                </div>
+                <div class="button d-flex justify-content-right form-action-buttons mt-5 ">
+                    <button class="submit" style='margin-right:16px' type="submit" value="Submit">Submit</button>
+                    <button class="reset" type="reset" value="Reset">Reset</button>
+                    
+                  </div>
+                 
+                </form>
+              </div>
+            </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>our locations</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Bhutan </a>
+          </div>
+  
+          <div class="box">
+            <h3>home links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> inventory </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our staff </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> human resources </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> rules & regulations </a>
+          </div>
+  
+          <div class="box">
+            <h3>extra links</h3>
+            <a href="leave.html"> <i class="fas fa-arrow-right"></i> leave application </a>
+            <a href="prores.html"> <i class="fas fa-arrow-right"></i> promotion / resignation </a>
+            <a href="calendar.html"> <i class="fas fa-arrow-right"></i> calendar </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our services </a>
+          </div>
+  
+          <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +97517916017 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +97517560774 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> sonten@gmail.com </a>
+          </div>
+        </div>
+  
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+          <a href="#" class="fab fa-pinterest"></a>
+        </div>
+  
+        <div class="credit">
+          created by <span>ME</span> | all rights reserved!
+        </div>
+      </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
